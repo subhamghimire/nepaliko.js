@@ -24,6 +24,7 @@ nepaliko example.nepaliko
 Hello k cha khabar
 </pre>
 
+
 ## Variables
 #### variables can be declared using `yo` keyword
 <pre>
@@ -37,6 +38,15 @@ namaste
 dhanyabad
 </pre>
 
+## Input
+### `laga` keyword will be used as input statement
+<pre>
+namaste
+yo laga a;
+a = "Namaste Bisow";
+a
+dhanyabad
+</pre>
 
 ## Types
 #### Numbers and strings are like other languages. Null values can be denoted using `khali`. `thik` and `bethik` are the boolean values.
@@ -92,6 +102,18 @@ namaste
 dhanyabad
 
 </pre>
+
+## Functions
+### `kaam` will replace function 
+<pre>
+namaste
+kaam(){
+yo a += b;
+a
+}
+dhanyabad
+</pre>
+
 
 
 
