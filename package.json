@@ -8,19 +8,39 @@
   },
   "scripts": {
     "start": "node src/cli.js",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm test"
   },
   "keywords": [
     "programming-language",
     "nepali",
-    "interpreter"
+    "interpreter",
+    "language",
+    "nepaliko",
+    "nepali-programming"
   ],
-  "author": "",
+  "author": "Shekhar Ghimire",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subhamghimire/nepaliko.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/subhamghimire/nepaliko.js/issues"
+  },
+  "homepage": "https://github.com/subhamghimire/nepaliko.js#readme",
   "dependencies": {
     "commander": "^11.0.0"
   },
   "devDependencies": {
     "jest": "^29.0.0"
-  }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ]
 }
