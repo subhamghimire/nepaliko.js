@@ -9,7 +9,7 @@ This is the fun programming language. Do Programming in Nepali Language, kind of
 2. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/nepaliko.js.git
+git clone https://github.com/subhamghimire/nepaliko.js.git
 cd nepaliko.js
 ```
 
