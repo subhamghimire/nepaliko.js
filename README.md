@@ -1,9 +1,40 @@
 # nepaliko.js
+
 This is the fun programming language. Do Programming in Nepali Language, kind of Nepangrezi.
+
+## Installation
+
+1. First, make sure you have Node.js installed. If not, install it from [nodejs.org](https://nodejs.org/)
+
+2. Clone this repository:
+
+```bash
+git clone https://github.com/yourusername/nepaliko.js.git
+cd nepaliko.js
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Make the CLI executable:
+
+```bash
+chmod +x src/cli.js
+```
+
+5. Create a global link to the nepaliko command:
+
+```bash
+sudo ln -s "$(pwd)/src/cli.js" /usr/local/bin/nepaliko
+```
 
 ## Usage
 
 ### Create a new file (example.nepaliko)
+
 <pre>
 namaste
   bhana "Hello k cha khabar";
@@ -12,8 +43,8 @@ dhanyabad
 
 This is the example where `namaste` is the entrypoint for the program and program must end with `dhanyabad`. Anything outside of it will be ignored.
 
-
 ### Run
+
 <pre>
 nepaliko example.nepaliko
 </pre>
@@ -24,8 +55,12 @@ nepaliko example.nepaliko
 Hello k cha khabar
 </pre>
 
-## Variables
-#### variables can be declared using `yo` keyword
+## Language Features
+
+### Variables
+
+Variables can be declared using `yo` keyword:
+
 <pre>
 namaste
   yo a = 1;
@@ -37,66 +72,95 @@ namaste
 dhanyabad
 </pre>
 
+### Types
 
-## Types
-#### Numbers and strings are like other languages. Null values can be denoted using `khali`. `thik` and `bethik` are the boolean values.
+- Numbers: `yo a = 2;`
+- Strings: `yo b = "Hello";` or `yo c = 'World';`
+- Boolean: `yo d = thik;` (true) or `yo e = bethik;` (false)
+- Null: `yo f = khali;`
 
-<pre>
-namaste
-  yo a = 2;
-  yo b = 2 + (3*5);
-  yo c = "one";
-  yo d = 'ok';
-  yo e = khali;
-  yo f = thik;
-  yo g = bethik;
-dhanyabad
+### Conditions
 
-</pre>
-
-## Conditions
-#### Nepaliko supports simple if else construct , `yadi` block will execute if condition is true(thik) and `nabhaye` block will execute if condition is false(bethik).
+Use `yadi` for if statements and `nabhaye` for else:
 
 <pre>
 namaste
-  yo a = 10;
-  yadi (a < 20) {
-   bhana "a is less than 20";
-  } nabhaye {
-   bhana "a is greater than or equal to 20";
-  }
+  yo a = 10;
+  yadi (a < 20) {
+    bhana "a is less than 20";
+  } nabhaye {
+    bhana "a is greater than or equal to 20";
+  }
 dhanyabad
 </pre>
 
+### Loops
 
-## Loops
-
-#### Statements inside `jaba samma` blocks are executed as long as a specified condition evaluates to `thik`. If the condition becomes `bethik`, statement within the loop stops executing and control passes to the statement following the loop. Use `bhayo` to break the loop and `jari` to continue within loop.
+Use `jaba samma` for while loops:
 
 <pre>
-
 namaste
-  yo a = 0;
-  jaba samma (a < 20) {
-   a += 1;
-   yadi (a == 5) {
-    bhana "dekha ", a;
-    jari;
-   }
-   nabhaye (a == 6) {
-    bhayo;
-   }
-   bhana a;
-  }
-  bhana "done";
+  yo counter = 0;
+  jaba samma (counter < 5) {
+    bhana "Counter is ", counter;
+    counter = counter + 1;
+  }
 dhanyabad
-
 </pre>
 
+## How It Works
 
+The nepaliko.js interpreter works in several stages:
 
+1. **Lexical Analysis (Tokenizer)**
 
+   - Converts source code into tokens
+   - Recognizes keywords like `namaste`, `dhanyabad`, `yo`, `bhana`, etc.
+   - Handles operators, identifiers, and literals
 
+2. **Parsing (Parser)**
 
+   - Converts tokens into an Abstract Syntax Tree (AST)
+   - Validates syntax and structure
+   - Creates nodes for different program elements (variables, conditions, loops)
 
+3. **Interpretation (Interpreter)**
 
+   - Walks through the AST
+   - Converts nepaliko syntax to JavaScript
+   - Handles variable scoping and operations
+
+4. **Execution**
+   - The generated JavaScript is executed using Node.js
+   - Results are displayed in the console
+
+### Example Translation
+
+Nepaliko code:
+
+<pre>
+namaste
+  yo a = 10;
+  bhana "Value is ", a;
+dhanyabad
+</pre>
+
+Gets translated to JavaScript:
+
+<pre>
+let a = 10;
+console.log("Value is ", a);
+</pre>
+
+## Contributing
+
+Feel free to contribute to this project by:
+
+1. Forking the repository
+2. Creating a feature branch
+3. Making your changes
+4. Submitting a pull request
+
+## License
+
+MIT License - feel free to use this project for any purpose.
