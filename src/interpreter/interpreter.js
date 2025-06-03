@@ -56,6 +56,12 @@ class Interpreter {
     const left = this.visit(node.left);
     const right = this.visit(node.right);
     const operator = this.getOperator(node.operator);
+
+    // Don't add extra parentheses for comparison operators
+    if (['LESS', 'GREATER', 'LESS_EQUALS', 'GREATER_EQUALS', 'EQUALS', 'NOT_EQUALS'].includes(node.operator)) {
+      return `${left} ${operator} ${right}`;
+    }
+
     return `(${left} ${operator} ${right})`;
   }
 
