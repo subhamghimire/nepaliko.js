@@ -1,0 +1,26 @@
+{
+  "name": "nepaliko.js",
+  "version": "1.0.0",
+  "description": "A programming language that uses Nepali syntax",
+  "main": "src/index.js",
+  "bin": {
+    "nepaliko": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "programming-language",
+    "nepali",
+    "interpreter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}

@@ -1,0 +1,18 @@
+namaste
+  yo a = 10;
+  yo b = "Hello";
+  bhana "Value of a is ", a;
+  bhana b;
+  
+  yadi (a < 20) {
+    bhana "a is less than 20";
+  } nabhaye {
+    bhana "a is greater than or equal to 20";
+  }
+  
+  yo counter = 0;
+  jaba samma (counter < 5) {
+    bhana "Counter is ", counter;
+    counter = counter + 1;
+  }
+dhanyabad 
