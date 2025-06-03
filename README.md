@@ -1,4 +1,6 @@
 # nepaliko.js
+[![npm package](https://img.shields.io/badge/npm-nepaliko.js-blue)](https://www.npmjs.com/package/nepaliko.js)
+[![npm version](https://img.shields.io/npm/v/nepaliko.js.svg)](https://www.npmjs.com/package/nepaliko.js)
 
 This is the fun programming language. Do Programming in Nepali Language, kind of Nepangrezi.
 
